@@ -17,3 +17,11 @@ Blog post -> https://realpython.com/blog/python/django-development-with-docker-c
 1. Start services - `docker-compose up -d`
 1. Create migrations - `docker-compose run web /usr/local/bin/python manage.py migrate`
 1. Grab IP - `docker-machine ip dev` - and view in your browser
+
+### Troubleshooting
+
+Table 'Django.todo_item' doesn't exist"
+
+1. Start container - `docker-compose start`
+2. Make migrations for todo - `docker exec dockerizing-django_web_1 python3 manage.py makemigrations todo`
+3. Migrate todo - `docker exec dockerizing-django_web_1 python3 manage.py migrate todo`
