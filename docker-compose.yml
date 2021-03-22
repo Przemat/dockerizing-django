@@ -19,11 +19,13 @@ services:
 
   nginx:
     restart: always
-    build: ./nginx/
+    image: nginx
     ports:
       - "80:80"
-      - "443:433"
+      - "443:443"
     volumes:
+      - ./nginx/conf:/etc/nginx
+      - ./nginx/cert:/etc/ssl
       - web-static:/www/static
     links:
       - web:web
