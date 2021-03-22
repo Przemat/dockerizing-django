@@ -18,6 +18,10 @@ Blog post -> https://realpython.com/blog/python/django-development-with-docker-c
 1. Create migrations - `docker-compose run web /usr/local/bin/python manage.py migrate`
 1. Grab IP - `docker-machine ip dev` - and view in your browser
 
+### SSL configuration
+
+Add files server.crt and server.key to folder nginx/cert
+
 ### Troubleshooting
 
 Table 'Django.todo_item' doesn't exist"
